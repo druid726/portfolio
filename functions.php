@@ -97,3 +97,4 @@ function afn_custom_comment_form($fields) {
   $fields['comment_notes_after'] = ''; // Removes comment after notes
     return $fields;
 }
+add_theme_support('post-thumbnails');

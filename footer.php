@@ -16,7 +16,7 @@
 
     <footer class="site-footer" role="contentinfo">
       <div class="site-info">
-        <p>&copy; PDO Web Development and Email Solutions | All Rights Reserved | &copy; 2015 </p>
+        <p>PDO Web Development and Email Solutions | All Rights Reserved | &copy; 2015 </p>
       </div><!-- .site-info -->
 
       <nav class="social-media-navigation" role="navigation">
