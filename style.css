@@ -227,8 +227,13 @@ h1 {
   float: left;
   width: 38%;
   margin-top: 50px;
-  margin-bottom: 25px;
+  margin-bottom: 125px;
 }
+.portfolio-images img{
+  float: left;
+  width: 100%;
+}
+
 /*  EMAIL / NEWSLETTER */
 
 figure {

@@ -15,11 +15,9 @@ get_header(); ?>
     <?php while ( have_posts() ) : the_post();
       $description = get_field('description');
       $link = get_field('site_link');
-      $image_1 = get_field('image_1');
-      $image_2 = get_field('image_2');
-      $image_3 = get_field('image_3');
-      $size = 'large';
+      $image = get_field('image_1');
     ?>
+
      <section class="portfolio-single">
       <div class="portfolio">
         <div class="portfolio-text">
@@ -32,9 +30,8 @@ get_header(); ?>
         </div> 
 
         <div class="portfolio-images">
-          <?php if($image_1) {
-              echo wp_get_attachment_image( $image_1, $size );
-            } ?>
+        <img src="<?php $image = get_field('image_1'); echo($image['sizes']['large']); ?>" alt="" />
+        </a>
         </div><!--portfolio-images-->
       </div>
 
@@ -44,7 +41,4 @@ get_header(); ?>
 
 
 <?php get_footer(); ?>
-
-
-
 

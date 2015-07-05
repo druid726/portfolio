@@ -64,7 +64,7 @@ get_header(); ?>
             <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
             <figure>
              <a href="<?php the_permalink(); ?>">
-             <?php echo wp_get_attachment_image($image_1, $size); ?></a>
+              <img src="<?php $image = get_field('image_1'); echo($image['sizes']['medium']); ?>" alt="" />
             </figure>
           </div><!--side-by-side-->
         </li><!--individual-featured-work-->
@@ -86,7 +86,7 @@ get_header(); ?>
           <div class="side-by-side">
             <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
             <figure>
-             <a href="<?php the_permalink(); ?>"><?php echo wp_get_attachment_image($email_image_1, $size); ?></a> 
+              <?php echo wp_get_attachment_image($email_image_1, $size); ?>
             </figure>
           </div><!--side-by-side-->
         </li><!--individual-featured-work-->
