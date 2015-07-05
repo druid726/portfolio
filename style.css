@@ -44,8 +44,12 @@ body {
 h1 {
   margin:0;
 }
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
 .site {
-  background: url("img/desk_view.jpg") no-repeat scroll left center / cover rgba(0, 0, 0, 0);
+  background: url("img/texture16.jpg") no-repeat scroll left center / cover rgba(0, 0, 0, 0);
 }
 .site-header {
   background: #422d3f;
@@ -98,7 +102,6 @@ h1 {
 .menu-toggle:active,
 .menu-toggle:focus,
 .menu-toggle:hover {
-  text-decoration: underline;
   color: #444;
 }
 .primary-navigation li:hover > a,
@@ -133,12 +136,11 @@ h1 {
   height: 10px;
 }
 .about h2 {
-  font-size: 4.0em;
+  font-size: 3.8em;
   text-align: center;
   margin-top: 10px;
 }
 .about {
-  background: url("img/texture16.jpg") no-repeat scroll left center / cover rgba(0, 0, 0, 0);
   padding: 10px;
 }
 .about p {
@@ -170,7 +172,7 @@ h1 {
   color: #F5F5F5;
   text-align: center;
   font-size: 2.0em;
-  margin: 0 210px 50px;
+  margin: 0 0 50px;
 }
 .no-style ul, li {
   list-style: none;
@@ -179,26 +181,10 @@ h1 {
 }
 .portfolio-side-by-side {
   float: left;
-  margin-right: 10px;
-  width: 31%;
+  margin-right: 30px;
+  width: 30%;
 }
 .portfolio-side-by-side a {
-  text-align: center;
-  color: #422d3f;
-  margin: 0;
-  font-size: 1.6em;
-}
-figure {
-  text-align: center;
-  margin: 0 0 100px;
-  padding: 0;
-}
-.side-by-side {
-  float: left;
-  margin-right: 10px;
-  width: 48%;
-}
-.side-by-side a {
   text-align: center;
   color: #422d3f;
   margin: 0;
@@ -221,6 +207,10 @@ figure {
 }
 /* PORTFOLIO SINGLES */
 
+.portfolio {
+  margin-left: 140px;
+  margin-right: 60px;
+}
 .portfolio-single {
   background: #f5f5f5;
   overflow: auto;
@@ -229,17 +219,34 @@ figure {
   margin-left: 40px;
   float: left;
   width: 48%;
-  margin-top: 100px;
+  margin-top: 20px;
+  z-index: 1;
 }
 .portfolio-images {
   margin-left: 40px;
   float: left;
-  width: 23%;
-  margin-top: 100px;
+  width: 38%;
+  margin-top: 50px;
   margin-bottom: 25px;
 }
 /*  EMAIL / NEWSLETTER */
 
+figure {
+  text-align: center;
+  margin: 0 0 100px;
+  padding: 0;
+}
+.side-by-side {
+  float: left;
+  margin-right: 10px;
+  width: 48%;
+}
+.side-by-side a {
+  text-align: center;
+  color: #422d3f;
+  margin: 0;
+  font-size: 1.6em;
+}
 .email-info {
   background: url("img/texture16.jpg") no-repeat scroll left center / cover rgba(0, 0, 0, 0);
 }
@@ -249,7 +256,7 @@ figure {
   color: #F5F5F5;
   text-align: center;
   font-size: 2.0em;
-  margin: 0 210px 50px;
+  margin: 0 0 50px;
 }
 .email-featured-work h3 {
   text-align: center;
@@ -268,7 +275,6 @@ figure {
   width: 48%;
   margin-top: 100px;
 }
-
 .email-image {
   float: right;
   width: 48%;
@@ -279,13 +285,12 @@ figure {
 
 .contact-divider {
   width: 100%;
-  /*background: #F5F5F5;*/
-  /*overflow: auto;*/
+  background: url("img/desk_2.jpg") no-repeat scroll left center / cover rgba(0, 0, 0, 0);
+  overflow: auto;
 }
 .ninja-forms-all-fields-wrap {
-  float: left;
   width: 480px;
-  margin: 50px;
+  margin: 50px 182px 50px;
 }
 .contact-info {
   background: #422d3f;
@@ -307,6 +312,17 @@ figure {
 }
 
 /*  RESPONSIVE */
+@media only screen and (max-width: 1175px) {
+ .portfolio-text {
+   float: none;
+   width: 100%;
+ }
+ .portfolio-images {
+   float: none;
+   width: 100%;
+   text-align: center;
+ }
+}
 
 @media only screen and (max-width: 1070px) {
   .header-main {
@@ -315,16 +331,13 @@ figure {
   .nav-menu li {
     margin-right: 40px;
   }
-   .about h2 {
-    font-size: 150%;
-  }
+
   .email-sidebar {
     margin-left: 40px;
     float: none;
     width: 100%;
     margin-top: 100px;
   }
-
   .email-image {
     margin-left: 40px;
     float: none;
@@ -332,68 +345,74 @@ figure {
     margin-top: 75px;
     margin-bottom: 75px;
   }
-  .portfolio-text {
-    margin-left: 40px;
-    float: none;
-    width: 100%;
-    margin-top: 100px;
-  }
-  .portfolio-images {
-    margin-left: 40px;
-    float: none;
-    width: 100%;
-    margin-top: 100px;
-    margin-bottom: 25px;
-  }
 }
 @media only screen and (max-width: 960px) {
   .portfolio-side-by-side {
-    float: left;
-    width: 48%;
+    float: none;
+    width: 100%;
+  }
+  .about p {
+    font-size: 175%;
+  }
+  .portfolio {
+    margin-left: 40px;
+  }
+}
+@media only screen and (max-width: 880px) {
+  .side-by-side {
+    float: none;
+    width: 100%;
   }
   .about h2 {
-    font-size: 120%;
-  }
-  .portfolio-info h4 {
-    margin: 0 auto 50px;
-  }
-  .email-info h4 {
-    margin: 0 auto 50px;
+    font-size: 3.2em;
   }
 }
 
 @media only screen and (max-width: 770px) {
   .homepage-hero h1 {
-    font-size: 420%;
+    font-size: 4.2em;
     padding: 0 5px;
   }
-  .side-by-side {
-    float: none;
-    width: 100%;
+  .about h2 {
+    font-size: 3.0em;
   }
-  .portfolio-side-by-side {
-    float: none;
-    width: 100%;
+  .about p {
+    font-size: 1.6em;
+  }
+  .email-info h4 {
+    font-size: 1.8em;
   }
 }
 @media only screen and (max-width: 650px) {
   .homepage-hero h1 {
-    font-size: 360%;
+    font-size: 3.6em;
   }
 }
 @media only screen and (max-width: 560px) {
   .homepage-hero h1 {
-    font-size: 320%;
+    font-size: 3.2em;
   }
   .ninja-forms-all-fields-wrap {
     float: left;
     width: 320px;
     margin: 20px;
   }
+  .about h2 {
+    font-size: 2.4em;
+  }
+  .portfolio-text {
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  .portfolio-images {
+    margin-left: 20px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+  }
 }
 @media only screen and (max-width: 460px) {
   .homepage-hero h1 {
-    font-size: 300%;
+    font-size: 3.0em;
   }
 
 }

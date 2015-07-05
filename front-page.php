@@ -16,6 +16,8 @@
 
 get_header(); ?>
 
+<div id="main-content" class="main-content">
+
   <section class="home-page">
       <?php while ( have_posts() ) : the_post(); ?>
       <div class="homepage-hero">        
@@ -24,6 +26,7 @@ get_header(); ?>
       <?php endwhile ?>
   </section><!--home-page-->
 
+  
   <section class="about-divider">
     <div class="about-info">
     </div>
@@ -32,8 +35,8 @@ get_header(); ?>
 
   <div class="about">
     <h2>Solving your digital marketing problems</h2>
-    <p>Hi, I'm Patti and I am the owner of PDO Web Development and Email Solutions.<br>
-    Whether it's creating a website; adding an SEO package or launching a newsletter &mdash;<br>
+    <p>Hi, I'm Patti and I am the owner of PDO Web Development and Email Solutions.  
+    Whether it's creating a website, adding an SEO package or launching a newsletter &mdash; 
     my number one priority is your business and its goals, and how we can partner together to achieve them.</p>
   </div>
 
@@ -45,6 +48,7 @@ get_header(); ?>
   </section>
 
 
+<div class="container">
   <section class="portfolio-divider">
     <div class="portfolio-info">
     <h4>Websites</h4>
@@ -91,6 +95,7 @@ get_header(); ?>
       </ul>
     </div><!--no-style--> 
     </div><!-- email-info -->
+</div><!-- container -->
   </section>    
   <section class="contact-divider">
     <div class="contact">
@@ -100,5 +105,5 @@ get_header(); ?>
       <?php if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 5 ); } ?>
     </div>
   </section>   
-
+  </div><!-- #main-content -->
 <?php get_footer(); ?>

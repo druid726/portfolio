@@ -98,3 +98,11 @@ function afn_custom_comment_form($fields) {
     return $fields;
 }
 add_theme_support('post-thumbnails');
+
+/* remove parent sidebars */
+function aquatify_remove_fourteen_sidebars() {
+  unregister_sidebar( 'sidebar-1' ); // primary on left
+  unregister_sidebar( 'sidebar-2' ); // secondary on right
+}
+add_action( 'widgets_init', 'aquatify_remove_fourteen_sidebars', 11 );
+
